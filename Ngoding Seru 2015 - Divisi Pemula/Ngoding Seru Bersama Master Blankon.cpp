@@ -9,7 +9,7 @@ int main(){
     if( s=='0'){
         if(a>b){
             if(b>c)
-				pertama=a;kedua=b;ketiga=c;
+                pertama=a;kedua=b;ketiga=c;
             else{
                 if(a>c)
                     pertama=a;kedua=c;ketiga=b; 

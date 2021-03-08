@@ -60,18 +60,18 @@ if(s=='1'){
             ketiga=a;
         }
     }
-	else{
+    else{
         if(b<a){
             pertama=c;
             kedua=b;
             ketiga=a;
         }
-        else
+        else{
             pertama=c;
             kedua=a;
             ketiga=b;
-    }	
-}
+        }
+    }
     printf("%d %d %d", pertama, kedua, ketiga);
     return 0;
 }

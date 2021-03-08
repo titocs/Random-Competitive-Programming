@@ -1,4 +1,6 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
+
 int main(){
 	int a, b, c;
 	char s;	
@@ -6,39 +8,38 @@ int main(){
 	scanf("%d %d %d %c", &a, &b, &c, &s);
 	if( s=='0'){
 		if(a>b){
-  			if(b>c){
-   			pertama=a;kedua=b;ketiga=c;
-  			}
+			if(b>c){
+				pertama=a;kedua=b;ketiga=c;
+			}
 			else{
-   				if(a>c){
-   				pertama=a;kedua=c;ketiga=b; 
-  		 	}		
-   				else{
-   				pertama=c;kedua=a;ketiga=b;
-   				}
-  			}
- 		}
- 		
- 	else{
-  		if(b>c){
-			if(a>c){
-    		pertama=b;kedua=a;ketiga=c;
-   			}
-   			else{
-    		pertama=b;kedua=c;ketiga=a;
-   			}
-  		}
-  		else{
-   			if(c>a){
-    			if(a>b){
-     			pertama=c;kedua=a;ketiga=b;
-    			}
+				if(a>c){
+					pertama=a;kedua=c;ketiga=b; 
+				}
 				else{
-    			 pertama=c;kedua=b;ketiga=a;
-    			}
-   			}
-  		}
- 	}
+					pertama=c;kedua=a;ketiga=b;
+				}
+			}
+		}
+	else{
+		if(b>c){
+			if(a>c){
+				pertama=b;kedua=a;ketiga=c;
+			}
+			else{
+				pertama=b;kedua=c;ketiga=a;
+			}
+		}
+		else{
+			if(c>a){
+				if(a>b){
+					pertama=c;kedua=a;ketiga=b;
+				}
+				else{
+					pertama=c;kedua=b;ketiga=a;
+				}
+			}
+		}
+	}
 }
 
 if(s=='1'){

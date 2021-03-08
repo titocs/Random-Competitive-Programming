@@ -33,9 +33,8 @@ int main(){
     getline(cin, s);
     int x = s.length();
     for(int i=0; i<x; i++){
-        if(s[i]>=65 && s[i]<=90){
+        if(s[i]>=65 && s[i]<=90)
             s[i] = s[i]+32;
-        }	
     }
     reverse(s.begin(), s.end());
     for(int i=0; i<x; i++){

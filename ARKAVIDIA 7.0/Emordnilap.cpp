@@ -29,7 +29,7 @@ const int MX = 200005;
 
 int main(){
     string s;
-    int flag = 0;
+    bool flag = false;
     getline(cin, s);
     int x = s.length();
     for(int i=0; i<x; i++){
@@ -39,15 +39,14 @@ int main(){
     }
     reverse(s.begin(), s.end());
     for(int i=0; i<x; i++){
-        if((s[i]>=48 && s[i]<=57)|| (s[i]>=65 && s[i]<=90)|| (s[i]>=97 && s[i]<=122)){
+        if((s[i]>=48 && s[i]<=57)|| (s[i]>=65 && s[i]<=90)|| (s[i]>=97 && s[i]<=122))
             continue;
-        }		
         else{
-            flag =1;
+            flag = true;
             break;
         }			
     }
-    if(flag==0)
+    if(!flag)
         cout << s;
     else
         cout << "Emor tidak beruntung :(";

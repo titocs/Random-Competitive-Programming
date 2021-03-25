@@ -2,13 +2,15 @@
 using namespace std;
 
 #define IOS ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+typedef long long ll
 long long seq[1<<20];
 bool dp[(1<<20) + 20];
  
 int main(){
-    long long n, m, q, seen, mul;
+    IOS;
+    ll n, m, q, seen, mul;
     cin >> n >> q;
-    long long A[n];
+    ll A[n];
     for(int i=0; i<n; ++i)
         cin >> A[i];
     mul = 1; seen = 0;
@@ -36,7 +38,7 @@ int main(){
          seen /= 2;
          seen += mul*dp[cur];
     }
-    long long cyc = cur-19-seq[seen];
+    ll cyc = cur-19-seq[seen];
     for(int i=0; i<q; i++){
         cin >> m;
         if(m < seq[seen]){
@@ -45,7 +47,7 @@ int main(){
             else
                 cout << "Melvin" << endl;
         else{
-            if(dp[(m-seq[seen])%cyc +seq[seen]])
+            if(dp[(m-seq[seen]) % cyc + seq[seen]])
                 cout << "Elon" << endl;
             else
                 cout << "Melvin" << endl;

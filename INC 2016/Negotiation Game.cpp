@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-	int t, n;
+    int t, n;
     vector<int> arr;
     cin >> t;
     for(int i=1; i<=t; ++i){

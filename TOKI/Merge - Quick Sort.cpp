@@ -18,20 +18,20 @@ void merge(int array[], int const left, int const mid, int const right){
     int indexOfMergedArray = left;
 
     while(indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo){
-	    if(leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]){
+        if(leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]){
 		    array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-		    indexOfSubArrayOne++;
+            indexOfSubArrayOne++;
 	    }
 	    else{
-	        array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
+            array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
 	        indexOfSubArrayTwo++;
 	    }
 		indexOfMergedArray++;
 	}
-	while(indexOfSubArrayOne < subArrayOne) {
-	    array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-	    indexOfSubArrayOne++;
-	    indexOfMergedArray++;
+    while(indexOfSubArrayOne < subArrayOne) {
+        array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
+        indexOfSubArrayOne++;
+        indexOfMergedArray++;
     }
     while(indexOfSubArrayTwo < subArrayTwo) {
         array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];

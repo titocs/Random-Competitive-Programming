@@ -9,45 +9,45 @@ void merge(int array[], int const left, int const mid, int const right){
          *rightArray = new int[subArrayTwo];
 
     for(auto i = 0; i < subArrayOne; i++)
-		leftArray[i] = array[left + i];
-	for(auto j = 0; j < subArrayTwo; j++)
-		rightArray[j] = array[mid + 1 + j];
+        leftArray[i] = array[left + i];
+    for(auto j = 0; j < subArrayTwo; j++)
+	    rightArray[j] = array[mid + 1 + j];
 
-	auto indexOfSubArrayOne = 0,
-		indexOfSubArrayTwo = 0;
-	int indexOfMergedArray = left;
+    auto indexOfSubArrayOne = 0,
+    	indexOfSubArrayTwo = 0;
+    int indexOfMergedArray = left;
 
-	while(indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo){
-		if(leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]){
-			array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-			indexOfSubArrayOne++;
-		}
-		else{
-			array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
-			indexOfSubArrayTwo++;
-		}
+    while(indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo){
+	    if(leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]){
+		    array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
+		    indexOfSubArrayOne++;
+	    }
+	    else{
+	        array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
+	        indexOfSubArrayTwo++;
+	    }
 		indexOfMergedArray++;
 	}
 	while(indexOfSubArrayOne < subArrayOne) {
-		array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-		indexOfSubArrayOne++;
-		indexOfMergedArray++;
-	}
-	while(indexOfSubArrayTwo < subArrayTwo) {
-		array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
-		indexOfSubArrayTwo++;
-		indexOfMergedArray++;
-	}
+	    array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
+	    indexOfSubArrayOne++;
+	    indexOfMergedArray++;
+    }
+    while(indexOfSubArrayTwo < subArrayTwo) {
+        array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
+        indexOfSubArrayTwo++;
+        indexOfMergedArray++;
+    }
 }
 
 void mergeSort(int array[], int const begin, int const end){
-	if (begin >= end)
-		return;
+    if (begin >= end)
+        return;
 
-	auto mid = begin + (end - begin) / 2;
-	mergeSort(array, begin, mid);
-	mergeSort(array, mid + 1, end);
-	merge(array, begin, mid, end);
+    auto mid = begin + (end - begin) / 2;
+    mergeSort(array, begin, mid);
+    mergeSort(array, mid + 1, end);
+    merge(array, begin, mid, end);
 }
 
 int main(){
@@ -55,10 +55,10 @@ int main(){
     int arr[n];
     for(int i=0; i<n; ++i)
         cin >> arr[i];
-	auto arr_size = sizeof(arr) / sizeof(arr[0]);
-	mergeSort(arr, 0, arr_size - 1);
+    auto arr_size = sizeof(arr) / sizeof(arr[0]);
+    mergeSort(arr, 0, arr_size - 1);
 
-	for(int i=0; i<n; ++i)
+    for(int i=0; i<n; ++i)
         cout << arr[i] << endl;
-	return 0;
+    return 0;
 }

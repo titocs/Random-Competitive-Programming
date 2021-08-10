@@ -2,13 +2,13 @@
 using namespace std;
 
 void merge(int array[], int const left, int const mid, int const right){
-	auto const subArrayOne = mid - left + 1;
-	auto const subArrayTwo = right - mid;
+    auto const subArrayOne = mid - left + 1;
+    auto const subArrayTwo = right - mid;
 
-	auto *leftArray = new int[subArrayOne],
-		*rightArray = new int[subArrayTwo];
+    auto *leftArray = new int[subArrayOne],
+         *rightArray = new int[subArrayTwo];
 
-	for(auto i = 0; i < subArrayOne; i++)
+    for(auto i = 0; i < subArrayOne; i++)
 		leftArray[i] = array[left + i];
 	for(auto j = 0; j < subArrayTwo; j++)
 		rightArray[j] = array[mid + 1 + j];

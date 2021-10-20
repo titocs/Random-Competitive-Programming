@@ -2,5 +2,5 @@
 using namespace std;
 
 int main(){
-	cout << "WelcomeToAprilFools2021" << endl;
+    cout << "WelcomeToAprilFools2021" << endl;
 }

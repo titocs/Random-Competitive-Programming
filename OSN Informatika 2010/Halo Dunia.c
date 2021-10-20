@@ -11,7 +11,7 @@ int main(){
     int len = strlen(world);
     for(i=0; i<len; i++){
         if(string[i] == dunia1[i] || string[i] == dunia2[i] ){
-            sum = sum+1;
+            sum++;
         }
     }
     printf("%d", sum);

@@ -7,8 +7,7 @@ long long seq[1<<20];
 bool dp[(1<<20) + 20];
  
 int main(){
-    IOS;
-    ll n, m, q, seen, mul;
+    IOS; ll n, m, q, seen, mul;
     cin >> n >> q;
     ll A[n];
     for(int i=0; i<n; ++i)
@@ -17,17 +16,17 @@ int main(){
     for(int i=0; i<20; i++){
         dp[i] = 0;
         for(int j=0; j<n; j++){
-            if(A[j]<=i && !dp[i-A[j]]){
+            if(A[j] <= i && !dp[i-A[j]]){
                 dp[i] = 1;
             }
         }
         seen += mul*dp[i];
-        mul*=2;
+        mul *= 2;
     }
     for(int i=0; i<mul; i++){
         seq[i] = -1;
     }
-    mul/=2; int cur = 19;
+    mul /= 2; int cur = 19;
     while(seq[seen] < 0){
         cur++;
         seq[seen] = cur-20;

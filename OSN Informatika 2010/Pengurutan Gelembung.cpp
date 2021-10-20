@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-    string s;
-    cin >> s;
+    string s; cin >> s;
     if(s == "PAS"){
         cout <<
         "var data:array[1..10000] of longint;" << endl 
